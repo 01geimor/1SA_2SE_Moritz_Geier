@@ -53,6 +53,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.rtxtb_ausgabe = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbl_error = new System.Windows.Forms.Label();
             this.panel_TankenFahren.SuspendLayout();
             this.panel_Info.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -71,6 +72,7 @@
             this.cmb_farbe.Name = "cmb_farbe";
             this.cmb_farbe.Size = new System.Drawing.Size(121, 21);
             this.cmb_farbe.TabIndex = 0;
+            this.cmb_farbe.Text = "Rot";
             // 
             // txtb_marke
             // 
@@ -78,6 +80,7 @@
             this.txtb_marke.Name = "txtb_marke";
             this.txtb_marke.Size = new System.Drawing.Size(121, 20);
             this.txtb_marke.TabIndex = 1;
+            this.txtb_marke.Text = "Porsche";
             // 
             // btn_start
             // 
@@ -95,6 +98,7 @@
             this.txtb_verbrauch.Name = "txtb_verbrauch";
             this.txtb_verbrauch.Size = new System.Drawing.Size(121, 20);
             this.txtb_verbrauch.TabIndex = 3;
+            this.txtb_verbrauch.Text = "7";
             // 
             // txtb_tankgr
             // 
@@ -102,6 +106,7 @@
             this.txtb_tankgr.Name = "txtb_tankgr";
             this.txtb_tankgr.Size = new System.Drawing.Size(121, 20);
             this.txtb_tankgr.TabIndex = 4;
+            this.txtb_tankgr.Text = "40";
             // 
             // txtb_ps
             // 
@@ -109,6 +114,7 @@
             this.txtb_ps.Name = "txtb_ps";
             this.txtb_ps.Size = new System.Drawing.Size(121, 20);
             this.txtb_ps.TabIndex = 5;
+            this.txtb_ps.Text = "25";
             // 
             // label1
             // 
@@ -180,6 +186,7 @@
             this.btn_fahren.TabIndex = 11;
             this.btn_fahren.Text = "fahren";
             this.btn_fahren.UseVisualStyleBackColor = true;
+            this.btn_fahren.Click += new System.EventHandler(this.btn_fahren_Click);
             // 
             // btn_tanken
             // 
@@ -189,6 +196,7 @@
             this.btn_tanken.TabIndex = 12;
             this.btn_tanken.Text = "tanken";
             this.btn_tanken.UseVisualStyleBackColor = true;
+            this.btn_tanken.Click += new System.EventHandler(this.btn_tanken_Click);
             // 
             // label11
             // 
@@ -275,6 +283,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lbl_error);
             this.groupBox1.Controls.Add(this.cmb_farbe);
             this.groupBox1.Controls.Add(this.txtb_marke);
             this.groupBox1.Controls.Add(this.label5);
@@ -292,6 +301,15 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Neues Auto erstellen";
+            // 
+            // lbl_error
+            // 
+            this.lbl_error.AutoSize = true;
+            this.lbl_error.ForeColor = System.Drawing.Color.Red;
+            this.lbl_error.Location = new System.Drawing.Point(340, 119);
+            this.lbl_error.Name = "lbl_error";
+            this.lbl_error.Size = new System.Drawing.Size(0, 13);
+            this.lbl_error.TabIndex = 11;
             // 
             // Form1
             // 
@@ -340,6 +358,7 @@
         private System.Windows.Forms.RichTextBox rtxtb_ausgabe;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lbl_error;
     }
 }
 

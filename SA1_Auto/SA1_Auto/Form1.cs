@@ -20,12 +20,23 @@ namespace SA1_Auto
         {
             try
             {
-                Auto a = new Auto(txtb_marke.Text,cmb_farbe.Text,Convert.ToInt32(txtb_ps),Convert.ToInt32(txtb_tankgr),Convert.ToInt32(txtb_verbrauch));
+                Auto a = new Auto(txtb_marke.Text,cmb_farbe.Text,Convert.ToInt32(txtb_ps.Text),Convert.ToInt32(txtb_tankgr.Text),Convert.ToInt32(txtb_verbrauch.Text));
+                lbl_error.Text = " ";
             }
             catch
             {
-
+                lbl_error.Text = "Eingabe fehlerhaft";
             }
+        }
+
+        private void btn_tanken_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_fahren_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
