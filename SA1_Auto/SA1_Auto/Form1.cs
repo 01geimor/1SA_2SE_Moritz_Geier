@@ -26,6 +26,7 @@ namespace SA1_Auto
                 lbl_error.Text = " ";
                 progressBar1.Maximum = Convert.ToInt32(txtb_tankgr.Text);
                 panel_TankenFahren.Enabled = true;
+                Ausgabe();
             }
             catch
             {
@@ -36,16 +37,18 @@ namespace SA1_Auto
         private void btn_tanken_Click(object sender, EventArgs e)
         {
             progressBar1.Value = Convert.ToInt32(a.Tanken(Convert.ToDouble(txtb_tanken.Text)));
+            Ausgabe();
         }
 
         private void btn_fahren_Click(object sender, EventArgs e)
         {
             progressBar1.Value= Convert.ToInt32(a.Fahren(Convert.ToInt32(txtb_fahren.Text)));
+            Ausgabe();
         }
         private void Ausgabe()
         {
             string[] s = a.Ausgabe();
-
+            rtxtb_ausgabe.Text = "Marke : "+s[0]+"\ngefahren : " +s[1]+"km \nFarbe : "+s[2]+"\nPS : "+s[3]+"\nTankinhalt : "+Convert.ToString(Convert.ToDouble(s[4])*40/100);
         }
     }
 }
