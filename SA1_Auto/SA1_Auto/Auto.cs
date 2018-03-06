@@ -7,8 +7,9 @@ namespace SA1_Auto
 {
     class Auto
     {
-        private int tankgroese,tankinhalt, verbrauch, ps;
+        private int tankgroese, verbrauch, ps;
         private string farbe, marke;
+        private double tankinhalt,gefahrenekm;
 
         public Auto(string marke, string farbe, int ps, int tankgroese, int verbrauch)
         {
@@ -19,7 +20,7 @@ namespace SA1_Auto
             this.verbrauch = verbrauch;
         }
 
-        public int Tanken(int tanken)
+        public double Tanken(double tanken)
         {
             if (tankinhalt+tanken<=tankgroese)
             {
@@ -32,17 +33,28 @@ namespace SA1_Auto
             return tankinhalt;
         }
 
-        public int Fahren(int fahren)
+        public double Fahren(double fahren)
         {
-            if (tankinhalt + fahren <= tankgroese)
+            if (tankinhalt - (fahren*verbrauch/100.0) >= 0)
             {
-                tankinhalt += fahren;
+                tankinhalt -= fahren * verbrauch / 100.0;
+                gefahrenekm += fahren;
             }
             else
             {
-                tankinhalt = tankgroese;
+                tankinhalt = 0;
+                for (int i = Convert.ToInt32(tankinhalt); i > 0; i--)
+                {
+                    gefahrenekm += verbrauch / 100.0;
+                }
             }
             return tankinhalt;
+        }
+
+        public string[] Ausgabe()
+        {
+            string[] s = new string[5]{marke,gefahrenekm.ToString(),farbe,ps.ToString(),tankinhalt.ToString()};
+            return s;
         }
     }
 }

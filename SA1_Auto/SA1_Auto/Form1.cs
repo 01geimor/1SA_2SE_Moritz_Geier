@@ -35,12 +35,17 @@ namespace SA1_Auto
 
         private void btn_tanken_Click(object sender, EventArgs e)
         {
-            progressBar1.Value = a.Tanken(Convert.ToInt32(txtb_tanken.Text));
+            progressBar1.Value = Convert.ToInt32(a.Tanken(Convert.ToDouble(txtb_tanken.Text)));
         }
 
         private void btn_fahren_Click(object sender, EventArgs e)
         {
-            a.Fahren(Convert.ToInt32(txtb_fahren);
+            progressBar1.Value= Convert.ToInt32(a.Fahren(Convert.ToInt32(txtb_fahren.Text)));
+        }
+        private void Ausgabe()
+        {
+            string[] s = a.Ausgabe();
+
         }
     }
 }

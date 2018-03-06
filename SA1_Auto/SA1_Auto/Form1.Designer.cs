@@ -355,7 +355,7 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.TextBox txtb_tanken;
         private System.Windows.Forms.TextBox txtb_fahren;
-        private System.Windows.Forms.RichTextBox rtxtb_ausgabe;
+        public System.Windows.Forms.RichTextBox rtxtb_ausgabe;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lbl_error;
