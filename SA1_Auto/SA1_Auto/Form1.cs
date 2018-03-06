@@ -15,5 +15,17 @@ namespace SA1_Auto
         {
             InitializeComponent();
         }
+
+        private void btn_start_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Auto a = new Auto(txtb_marke.Text,cmb_farbe.Text,Convert.ToInt32(txtb_ps),Convert.ToInt32(txtb_tankgr),Convert.ToInt32(txtb_verbrauch));
+            }
+            catch
+            {
+
+            }
+        }
     }
 }

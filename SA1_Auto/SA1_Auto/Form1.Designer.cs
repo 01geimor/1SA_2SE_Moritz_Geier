@@ -39,8 +39,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel_Auto = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel_TankenFahren = new System.Windows.Forms.Panel();
             this.btn_fahren = new System.Windows.Forms.Button();
             this.btn_tanken = new System.Windows.Forms.Button();
@@ -54,9 +52,10 @@
             this.panel_Info = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.rtxtb_ausgabe = new System.Windows.Forms.RichTextBox();
-            this.panel_Auto.SuspendLayout();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel_TankenFahren.SuspendLayout();
             this.panel_Info.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmb_farbe
@@ -68,44 +67,45 @@
             "Schwarz",
             "Silber",
             "Weiß"});
-            this.cmb_farbe.Location = new System.Drawing.Point(98, 55);
+            this.cmb_farbe.Location = new System.Drawing.Point(101, 63);
             this.cmb_farbe.Name = "cmb_farbe";
             this.cmb_farbe.Size = new System.Drawing.Size(121, 21);
             this.cmb_farbe.TabIndex = 0;
             // 
             // txtb_marke
             // 
-            this.txtb_marke.Location = new System.Drawing.Point(98, 29);
+            this.txtb_marke.Location = new System.Drawing.Point(101, 37);
             this.txtb_marke.Name = "txtb_marke";
             this.txtb_marke.Size = new System.Drawing.Size(121, 20);
             this.txtb_marke.TabIndex = 1;
             // 
             // btn_start
             // 
-            this.btn_start.Location = new System.Drawing.Point(337, 79);
+            this.btn_start.Location = new System.Drawing.Point(340, 87);
             this.btn_start.Name = "btn_start";
             this.btn_start.Size = new System.Drawing.Size(121, 23);
             this.btn_start.TabIndex = 2;
             this.btn_start.Text = "Auto erstellen";
             this.btn_start.UseVisualStyleBackColor = true;
+            this.btn_start.Click += new System.EventHandler(this.btn_start_Click);
             // 
             // txtb_verbrauch
             // 
-            this.txtb_verbrauch.Location = new System.Drawing.Point(337, 55);
+            this.txtb_verbrauch.Location = new System.Drawing.Point(340, 63);
             this.txtb_verbrauch.Name = "txtb_verbrauch";
             this.txtb_verbrauch.Size = new System.Drawing.Size(121, 20);
             this.txtb_verbrauch.TabIndex = 3;
             // 
             // txtb_tankgr
             // 
-            this.txtb_tankgr.Location = new System.Drawing.Point(337, 29);
+            this.txtb_tankgr.Location = new System.Drawing.Point(340, 37);
             this.txtb_tankgr.Name = "txtb_tankgr";
             this.txtb_tankgr.Size = new System.Drawing.Size(121, 20);
             this.txtb_tankgr.TabIndex = 4;
             // 
             // txtb_ps
             // 
-            this.txtb_ps.Location = new System.Drawing.Point(98, 82);
+            this.txtb_ps.Location = new System.Drawing.Point(101, 90);
             this.txtb_ps.Name = "txtb_ps";
             this.txtb_ps.Size = new System.Drawing.Size(121, 20);
             this.txtb_ps.TabIndex = 5;
@@ -113,7 +113,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 32);
+            this.label1.Location = new System.Drawing.Point(52, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 6;
@@ -122,7 +122,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(266, 32);
+            this.label2.Location = new System.Drawing.Point(269, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 7;
@@ -131,7 +131,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 84);
+            this.label3.Location = new System.Drawing.Point(52, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 8;
@@ -140,7 +140,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 58);
+            this.label4.Location = new System.Drawing.Point(52, 66);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 9;
@@ -149,39 +149,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(269, 58);
+            this.label5.Location = new System.Drawing.Point(272, 66);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 13);
             this.label5.TabIndex = 10;
             this.label5.Text = "Verbrauch :";
-            // 
-            // panel_Auto
-            // 
-            this.panel_Auto.Controls.Add(this.cmb_farbe);
-            this.panel_Auto.Controls.Add(this.label5);
-            this.panel_Auto.Controls.Add(this.txtb_marke);
-            this.panel_Auto.Controls.Add(this.label4);
-            this.panel_Auto.Controls.Add(this.btn_start);
-            this.panel_Auto.Controls.Add(this.label3);
-            this.panel_Auto.Controls.Add(this.txtb_verbrauch);
-            this.panel_Auto.Controls.Add(this.label2);
-            this.panel_Auto.Controls.Add(this.txtb_tankgr);
-            this.panel_Auto.Controls.Add(this.label1);
-            this.panel_Auto.Controls.Add(this.txtb_ps);
-            this.panel_Auto.Location = new System.Drawing.Point(44, 36);
-            this.panel_Auto.Name = "panel_Auto";
-            this.panel_Auto.Size = new System.Drawing.Size(499, 138);
-            this.panel_Auto.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(41, 17);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(152, 16);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Neues Auto erstellen";
             // 
             // panel_TankenFahren
             // 
@@ -194,6 +166,7 @@
             this.panel_TankenFahren.Controls.Add(this.progressBar1);
             this.panel_TankenFahren.Controls.Add(this.txtb_tanken);
             this.panel_TankenFahren.Controls.Add(this.txtb_fahren);
+            this.panel_TankenFahren.Enabled = false;
             this.panel_TankenFahren.Location = new System.Drawing.Point(44, 266);
             this.panel_TankenFahren.Name = "panel_TankenFahren";
             this.panel_TankenFahren.Size = new System.Drawing.Size(266, 159);
@@ -300,25 +273,43 @@
             this.rtxtb_ausgabe.TabIndex = 16;
             this.rtxtb_ausgabe.Text = "";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cmb_farbe);
+            this.groupBox1.Controls.Add(this.txtb_marke);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtb_ps);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtb_tankgr);
+            this.groupBox1.Controls.Add(this.btn_start);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtb_verbrauch);
+            this.groupBox1.Location = new System.Drawing.Point(44, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(499, 138);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Neues Auto erstellen";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 452);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel_Info);
             this.Controls.Add(this.panel_TankenFahren);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.panel_Auto);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.panel_Auto.ResumeLayout(false);
-            this.panel_Auto.PerformLayout();
             this.panel_TankenFahren.ResumeLayout(false);
             this.panel_TankenFahren.PerformLayout();
             this.panel_Info.ResumeLayout(false);
             this.panel_Info.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -335,8 +326,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel_Auto;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel_TankenFahren;
         private System.Windows.Forms.Panel panel_Info;
         private System.Windows.Forms.Button btn_fahren;
@@ -350,6 +339,7 @@
         private System.Windows.Forms.TextBox txtb_fahren;
         private System.Windows.Forms.RichTextBox rtxtb_ausgabe;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
