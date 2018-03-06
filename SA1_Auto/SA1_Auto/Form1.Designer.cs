@@ -39,9 +39,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_Auto = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel_TankenFahren = new System.Windows.Forms.Panel();
             this.btn_fahren = new System.Windows.Forms.Button();
             this.btn_tanken = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -51,17 +51,23 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.txtb_tanken = new System.Windows.Forms.TextBox();
             this.txtb_fahren = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel_Info = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.rtxtb_ausgabe = new System.Windows.Forms.RichTextBox();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panel_Auto.SuspendLayout();
+            this.panel_TankenFahren.SuspendLayout();
+            this.panel_Info.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmb_farbe
             // 
             this.cmb_farbe.FormattingEnabled = true;
+            this.cmb_farbe.Items.AddRange(new object[] {
+            "Rot",
+            "Blau",
+            "Schwarz",
+            "Silber",
+            "Weiß"});
             this.cmb_farbe.Location = new System.Drawing.Point(98, 55);
             this.cmb_farbe.Name = "cmb_farbe";
             this.cmb_farbe.Size = new System.Drawing.Size(121, 21);
@@ -149,23 +155,23 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Verbrauch :";
             // 
-            // panel1
+            // panel_Auto
             // 
-            this.panel1.Controls.Add(this.cmb_farbe);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txtb_marke);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.btn_start);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtb_verbrauch);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtb_tankgr);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtb_ps);
-            this.panel1.Location = new System.Drawing.Point(44, 36);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(499, 138);
-            this.panel1.TabIndex = 11;
+            this.panel_Auto.Controls.Add(this.cmb_farbe);
+            this.panel_Auto.Controls.Add(this.label5);
+            this.panel_Auto.Controls.Add(this.txtb_marke);
+            this.panel_Auto.Controls.Add(this.label4);
+            this.panel_Auto.Controls.Add(this.btn_start);
+            this.panel_Auto.Controls.Add(this.label3);
+            this.panel_Auto.Controls.Add(this.txtb_verbrauch);
+            this.panel_Auto.Controls.Add(this.label2);
+            this.panel_Auto.Controls.Add(this.txtb_tankgr);
+            this.panel_Auto.Controls.Add(this.label1);
+            this.panel_Auto.Controls.Add(this.txtb_ps);
+            this.panel_Auto.Location = new System.Drawing.Point(44, 36);
+            this.panel_Auto.Name = "panel_Auto";
+            this.panel_Auto.Size = new System.Drawing.Size(499, 138);
+            this.panel_Auto.TabIndex = 11;
             // 
             // label6
             // 
@@ -177,21 +183,21 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Neues Auto erstellen";
             // 
-            // panel2
+            // panel_TankenFahren
             // 
-            this.panel2.Controls.Add(this.btn_fahren);
-            this.panel2.Controls.Add(this.btn_tanken);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.progressBar1);
-            this.panel2.Controls.Add(this.txtb_tanken);
-            this.panel2.Controls.Add(this.txtb_fahren);
-            this.panel2.Location = new System.Drawing.Point(44, 266);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(266, 159);
-            this.panel2.TabIndex = 13;
+            this.panel_TankenFahren.Controls.Add(this.btn_fahren);
+            this.panel_TankenFahren.Controls.Add(this.btn_tanken);
+            this.panel_TankenFahren.Controls.Add(this.label11);
+            this.panel_TankenFahren.Controls.Add(this.label8);
+            this.panel_TankenFahren.Controls.Add(this.label9);
+            this.panel_TankenFahren.Controls.Add(this.label10);
+            this.panel_TankenFahren.Controls.Add(this.progressBar1);
+            this.panel_TankenFahren.Controls.Add(this.txtb_tanken);
+            this.panel_TankenFahren.Controls.Add(this.txtb_fahren);
+            this.panel_TankenFahren.Location = new System.Drawing.Point(44, 266);
+            this.panel_TankenFahren.Name = "panel_TankenFahren";
+            this.panel_TankenFahren.Size = new System.Drawing.Size(266, 159);
+            this.panel_TankenFahren.TabIndex = 13;
             // 
             // btn_fahren
             // 
@@ -268,14 +274,14 @@
             this.txtb_fahren.Size = new System.Drawing.Size(121, 20);
             this.txtb_fahren.TabIndex = 12;
             // 
-            // panel3
+            // panel_Info
             // 
-            this.panel3.Controls.Add(this.rtxtb_ausgabe);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Location = new System.Drawing.Point(316, 266);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(227, 159);
-            this.panel3.TabIndex = 14;
+            this.panel_Info.Controls.Add(this.rtxtb_ausgabe);
+            this.panel_Info.Controls.Add(this.label7);
+            this.panel_Info.Location = new System.Drawing.Point(316, 266);
+            this.panel_Info.Name = "panel_Info";
+            this.panel_Info.Size = new System.Drawing.Size(227, 159);
+            this.panel_Info.TabIndex = 14;
             // 
             // label7
             // 
@@ -299,18 +305,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 452);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel_Info);
+            this.Controls.Add(this.panel_TankenFahren);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel_Auto);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel_Auto.ResumeLayout(false);
+            this.panel_Auto.PerformLayout();
+            this.panel_TankenFahren.ResumeLayout(false);
+            this.panel_TankenFahren.PerformLayout();
+            this.panel_Info.ResumeLayout(false);
+            this.panel_Info.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,10 +335,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel_Auto;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel_TankenFahren;
+        private System.Windows.Forms.Panel panel_Info;
         private System.Windows.Forms.Button btn_fahren;
         private System.Windows.Forms.Button btn_tanken;
         private System.Windows.Forms.Label label11;
