@@ -11,6 +11,8 @@ namespace SA1_Auto
 {
     public partial class Form1 : Form
     {
+        Auto a;
+
         public Form1()
         {
             InitializeComponent();
@@ -20,8 +22,10 @@ namespace SA1_Auto
         {
             try
             {
-                Auto a = new Auto(txtb_marke.Text,cmb_farbe.Text,Convert.ToInt32(txtb_ps.Text),Convert.ToInt32(txtb_tankgr.Text),Convert.ToInt32(txtb_verbrauch.Text));
+                a = new Auto(txtb_marke.Text,cmb_farbe.Text,Convert.ToInt32(txtb_ps.Text),Convert.ToInt32(txtb_tankgr.Text),Convert.ToInt32(txtb_verbrauch.Text));
                 lbl_error.Text = " ";
+                progressBar1.Maximum = Convert.ToInt32(txtb_tankgr.Text);
+                panel_TankenFahren.Enabled = true;
             }
             catch
             {
@@ -31,12 +35,12 @@ namespace SA1_Auto
 
         private void btn_tanken_Click(object sender, EventArgs e)
         {
-
+            progressBar1.Value = a.Tanken(Convert.ToInt32(txtb_tanken.Text));
         }
 
         private void btn_fahren_Click(object sender, EventArgs e)
         {
-
+            a.Fahren(Convert.ToInt32(txtb_fahren);
         }
     }
 }
